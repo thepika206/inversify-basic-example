@@ -12,9 +12,9 @@ export class EpicBattle implements Battle {
 
     public fight() {
         let desc = `FIGHT!
-                ${this.warrior1.name} (${this.warrior1.weapon.name}, ${this.warrior1.pauldron.name})
+                ${this.warrior1.name} (${this.warrior1.weapon.name}, ${this.warrior1.pauldron.name}, ${this.warrior1.gauntlet.name})
                 vs
-                ${this.warrior2.name} (${this.warrior2.weapon.name}, ${this.warrior2.pauldron.name})`;
+                ${this.warrior2.name} (${this.warrior2.weapon.name}, ${this.warrior2.pauldron.name}, ${this.warrior2.gauntlet.name})`;
         return desc;
     }
 

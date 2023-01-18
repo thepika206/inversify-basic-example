@@ -6,7 +6,8 @@ import {
   Battle,
   Weapon,
   Warrior,
-  Pauldron
+  Pauldron,
+  Gauntlet
 } from "../interfaces";
 
 import {
@@ -15,6 +16,8 @@ import {
   Shuriken,
   LeatherPauldron,
   SteelPauldron,
+  LeatherGauntlet,
+  SteelGauntlet,
   Ninja,
   Samurai
 } from "../entities";
@@ -30,6 +33,8 @@ container.bind<Weapon>(SERVICE_IDENTIFIER.WEAPON).to(Shuriken).whenParentNamed(T
 container.bind<Weapon>(SERVICE_IDENTIFIER.WEAPON).to(Katana).whenParentNamed(TAG.JAPANESE);
 container.bind<Pauldron>(SERVICE_IDENTIFIER.PAULDRON).to(SteelPauldron).whenParentNamed(TAG.JAPANESE);
 container.bind<Pauldron>(SERVICE_IDENTIFIER.PAULDRON).to(LeatherPauldron).whenParentNamed(TAG.CHINESE);
+container.bind<Gauntlet>(SERVICE_IDENTIFIER.GAUNTLET).to(SteelGauntlet).whenParentNamed(TAG.JAPANESE);
+container.bind<Gauntlet>(SERVICE_IDENTIFIER.GAUNTLET).to(LeatherGauntlet).whenParentNamed(TAG.CHINESE);
 container.bind<Battle>(SERVICE_IDENTIFIER.BATTLE).to(EpicBattle);
 
 export default container;
