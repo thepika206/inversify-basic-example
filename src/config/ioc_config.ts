@@ -15,9 +15,9 @@ import {
   Katana,
   Shuriken,
   LeatherPauldron,
-  SteelPauldron,
+  // SteelPauldron,
   LeatherGauntlet,
-  SteelGauntlet,
+  // SteelGauntlet,
   Ninja,
   Samurai
 } from "../entities";
@@ -31,10 +31,10 @@ container.bind<Warrior>(SERVICE_IDENTIFIER.WARRIOR).to(Ninja).whenTargetNamed(TA
 container.bind<Warrior>(SERVICE_IDENTIFIER.WARRIOR).to(Samurai).whenTargetNamed(TAG.JAPANESE);
 container.bind<Weapon>(SERVICE_IDENTIFIER.WEAPON).to(Shuriken).whenParentNamed(TAG.CHINESE);
 container.bind<Weapon>(SERVICE_IDENTIFIER.WEAPON).to(Katana).whenParentNamed(TAG.JAPANESE);
-container.bind<Pauldron>(SERVICE_IDENTIFIER.PAULDRON).to(SteelPauldron).whenParentNamed(TAG.JAPANESE);
-container.bind<Pauldron>(SERVICE_IDENTIFIER.PAULDRON).to(LeatherPauldron).whenParentNamed(TAG.CHINESE);
-container.bind<Gauntlet>(SERVICE_IDENTIFIER.GAUNTLET).to(SteelGauntlet).whenParentNamed(TAG.JAPANESE);
-container.bind<Gauntlet>(SERVICE_IDENTIFIER.GAUNTLET).to(LeatherGauntlet).whenParentNamed(TAG.CHINESE);
+// container.bind<Pauldron>(SERVICE_IDENTIFIER.PAULDRON).to(SteelPauldron).whenParentNamed(TAG.JAPANESE);
+container.bind<Pauldron>(SERVICE_IDENTIFIER.PAULDRON).to(LeatherPauldron);
+// container.bind<Gauntlet>(SERVICE_IDENTIFIER.GAUNTLET).to(SteelGauntlet).whenParentNamed(TAG.JAPANESE);
+container.bind<Gauntlet>(SERVICE_IDENTIFIER.GAUNTLET).to(LeatherGauntlet);
 container.bind<Battle>(SERVICE_IDENTIFIER.BATTLE).to(EpicBattle);
 
 export default container;
