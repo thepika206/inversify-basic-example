@@ -15,17 +15,17 @@ import {
 import {
   EpicBattle,
   Katana,
-  Shuriken,
-  LeatherPauldron,
-  SteelPauldron,
+  LeatherBoots,
   LeatherGauntlet,
-  SteelGauntlet,
   LeatherHelmet,
-  SteelHelmet,
+  LeatherPauldron,
   Ninja,
   Samurai,
-  LeatherBoots,
+  Shuriken,
   SteelBoots,
+  SteelGauntlet,
+  SteelHelmet,
+  SteelPauldron,
 } from "../entities";
 
 import SERVICE_IDENTIFIER from "../constants/identifiers";
